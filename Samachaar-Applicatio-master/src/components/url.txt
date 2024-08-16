@@ -1,0 +1,47 @@
+
+
+// mene configure kiii huiii api hai 
+-------------------------------------x------------------------------------x------------------------------------x  dev does not hate waali account kii hai....
+
+'https://newsapi.org/v2/top-headlines?country=us&category=${this.props.catagory}&apiKey=e7b8684f1d6a40b7a712359b9fbaada1&page=${this.state.page+1}&pageSize=${this.props.pageSize}`
+
+-----------------------------------------x-------------------------------------x-----------------------------------x
+
+
+   let url = `https://newsapi.org/v2/everything?q=${this.props.subject1}&%20${this.props.subject2}%20from=2023-02-06&sortBy=publishedAt&apiKey=e7b8684f1d6a40b7a712359b9fbaada1&page=${this.state.page+1}&pageSize=${this.props.pageSize}`
+
+
+
+      //    let url = `https://newsapi.org/v2/everything?q=Artificial%20Intelligence%20&from=2023-03-03&to=2023-03-03&sortBy=popularity&apiKey=b769a18b642d40fea7e30cdde2b1e09d&page=1&pageSize=${this.props.pageSize}`
+
+
+  //  let url = `https://newsapi.org/v2/everything?q=${this.props.subject1}&%20${this.props.subject2}%20from=2023-02-06&sortBy=publishedAt&apiKey=e7b8684f1d6a40b7a712359b9fbaada1&page=${this.state.page+1}&pageSize=${this.props.pageSize}`
+  handleNextClick = async () => {
+        console.log("next");
+        
+        if((this.state.page+1) >= Math.ceil(this.state.totalResults/this.props.pageSize)){
+      }
+e7b8684f1d6a40b7a712359b9fbaada1
+
+---------------------------------------------------x----------------------------------------------x-----------------------------------------------------------x------------------------------
+
+
+       //     let url = `https://newsapi.org/v2/everything?q=Artificial%20Intelligence%20&from=2023-03-03&to=2023-03-03&sortBy=popularity&apiKey=b769a18b642d40fea7e30cdde2b1e09d&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`
+else{
+      
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.catagory}&apiKey=e7b8684f1d6a40b7a712359b9fbaada1&page=${this.state.page+1}&pageSize=${this.props.pageSize}`
+
+           this.setState({loading:true});
+            let data = await fetch(url);
+
+
+            let parsedData = await data.json();
+
+            this.setState({
+                page: this.state.page + 1,
+                loading:false,
+                articles: parsedData.articles
+            })
+        }
+    }
+    
